@@ -15,7 +15,7 @@ public class TodoService {
 
     // injeção de dependência do componente de software
     public TodoService(TodoRepository todoRepository) {
-        todoRepository = todoRepository;
+        this.todoRepository = todoRepository;
     }
 
     public List<Todo> create(Todo todo) {
@@ -24,7 +24,7 @@ public class TodoService {
     }
 
     public List<Todo> list() {
-        Sort sort = Sort.by("propriedade").descending().and(Sort.by("nome").ascending());
+        Sort sort = Sort.by("prioridade").descending().and(Sort.by("nome").ascending());
         return todoRepository.findAll(sort);
     }
 

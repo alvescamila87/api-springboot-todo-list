@@ -17,7 +17,7 @@ public class TodoController {
 
     // injeção via construtor
     public TodoController(TodoService todoService) {
-        todoService = todoService;
+        this.todoService = todoService;
     }
 
     @PostMapping
