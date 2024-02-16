@@ -2,6 +2,7 @@ package com.camila.apispringboottodolist.controller;
 
 import com.camila.apispringboottodolist.entity.Todo;
 import com.camila.apispringboottodolist.service.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,7 @@ public class TodoController {
     }
 
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo) {
+    List<Todo> create(@RequestBody @Valid Todo todo) {
         return todoService.create(todo);
     }
 

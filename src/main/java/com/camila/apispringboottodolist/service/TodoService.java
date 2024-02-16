@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class TodoService {
 
-    //reposiory
+    //repository
     private TodoRepository todoRepository;
 
     // injeção de dependência do componente de software
